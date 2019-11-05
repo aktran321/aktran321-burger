@@ -2,14 +2,19 @@ require('dotenv').config();
 // Set up MySQL connection.
 var mysql = require("mysql");
 var key = require("../key");
+var connection;
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: key.password.password,
-  database: "burger_db"
-});
+if(process.env.JAWS_URL) {
+  connection = mysql.createConnection(process.env.JAWS_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: key.password.password,
+    database: "burger_db"
+  });
+}
 
 // Make connection.
 connection.connect(function(err) {
