@@ -17,4 +17,27 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
-  
+
+
+  body {
+    background-image: url("../img/burger.jpg");
+    background-size: 200px 200px;
+  }
+  button {
+    color: red;
+
+  }
+  button:hover {
+    background: aqua;
+    color: blue;
+  }
+
+  h1 {
+    font-family: 'Oleo Script', cursive;
+    color: white;
+    background-color: red;
+  }
+  h2, label{
+    color: white;
+    background-color: orange;
+  }
