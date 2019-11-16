@@ -37,7 +37,45 @@ li {
     color: white;
     background-color: red;
   }
-  h2, label{
+  
+  h1 {
+  
+    background-color: red;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    from {background-color: white;}
+    to {background-color: red;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    from {background-color: white;}
+    to {background-color: red;}
+  }
+
+  h2, label {
     color: white;
     background-color: orange;
+    -webkit-animation-name: other; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: other;
+    animation-duration: 4s;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes other {
+    from {background-color: white;}
+    to {background-color: orange;}
+  }
+  
+  /* Standard syntax */
+  @keyframes other {
+    from {background-color: white;}
+    to {background-color: orange;}
   }
